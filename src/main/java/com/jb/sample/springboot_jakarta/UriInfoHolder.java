@@ -2,7 +2,6 @@ package com.jb.sample.springboot_jakarta;
 
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.UriInfo;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
