@@ -11,7 +11,7 @@ public class JerseyConfig  {
     public ResourceConfig jerseyConfiguration() {
         ResourceConfig resourceConfig = new ResourceConfig();
         resourceConfig.packages("com.jb.sample.springboot_jakarta"); // Adjust to your package structure
-        resourceConfig.register(UriInfoFilter.class); // Register your filter
+//        resourceConfig.register(UriInfoFilter.class); // Register your filter
         return resourceConfig;
     }
 }

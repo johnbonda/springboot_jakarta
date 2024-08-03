@@ -17,10 +17,14 @@ public class Controller {
     @Autowired
     private MyService myService;
 
+    @Autowired
+    private UriInfoHolder uriInfoHolder;
+
     @GET
     public Response get(@Context UriInfo uriInfo) {
         String userAgent = httpHeaders.getHeaderString(HttpHeaders.USER_AGENT);
         System.out.println("uri info is:"+ uriInfo.getAbsolutePath().toString());
+        uriInfoHolder.setUriInfo(uriInfo);
         myService.myMethod();
         return Response.ok("User-Agent: " + userAgent).build();
     }
